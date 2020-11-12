@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http.response import JsonResponse
+from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 import sys
@@ -31,4 +31,4 @@ def send_code(request):
                 print(e)
 
         print(s.getvalue())
-        return JsonResponse({'result': s.getvalue()}, safe=False)
+        return HttpResponse(s.getvalue())
