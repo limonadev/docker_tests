@@ -3,7 +3,6 @@ from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 import sys
-import json
 import contextlib
 from io import StringIO
 
