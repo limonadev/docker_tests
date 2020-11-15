@@ -23,7 +23,7 @@ def send_code(request):
 
         with stdoutIO() as s:
             try:
-                exec(content)
+                exec(content, globals())
             except Exception as e:
                 print('PROGRAM FAILED: ')
                 print(type(e))
